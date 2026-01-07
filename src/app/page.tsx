@@ -4,75 +4,78 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <>
-      {/* Hero Section - matching original site exactly */}
-      <section className="relative py-16 lg:py-24 overflow-hidden pb-32">
-        {/* Background Image with Overlay */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(/images/chiropractor-in-minot.jpg)',
-            filter: 'brightness(0.85)'
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#b8d4df]/90 via-[#c5dce5]/80 to-transparent" />
+      {/* Hero Section with Swooping curve through cards */}
+      <div className="relative">
+        {/* Hero Content Area */}
+        <section className="relative py-16 lg:py-24 overflow-hidden">
+          {/* Background Image with Overlay */}
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: 'url(/images/chiropractor-in-minot.jpg)',
+              filter: 'brightness(0.85)'
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#b8d4df]/90 via-[#c5dce5]/80 to-transparent" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1
-                className="text-[42px] lg:text-[52.8px] font-bold text-white mb-4 leading-[1.4] drop-shadow-lg"
-                style={{ fontFamily: 'Merriweather, serif' }}
-              >
-                Chiropractor in Minot, ND
-              </h1>
-              <p
-                className="text-[24px] lg:text-[32px] text-white mb-8 leading-[1.4] drop-shadow-md"
-                style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 200 }}
-              >
-                Achieve optimal health with premium chiropractic care.
-              </p>
-              <a
-                href="https://portal.sked.life/new-patient/?key=b6e1a8127fac8d99ea72eacef6dbe9f8e19b626781b488998d36f67c6dcdd68c"
-                className="btn-gold"
-              >
-                NEW PATIENT SPECIAL
-              </a>
-            </div>
-            <div className="relative">
-              <div className="aspect-video rounded-lg overflow-hidden shadow-xl">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/npblGaOUP9s"
-                  title="CornerStone Chiropractic"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h1
+                  className="text-[42px] lg:text-[52.8px] font-bold text-white mb-4 leading-[1.4] drop-shadow-lg"
+                  style={{ fontFamily: 'Merriweather, serif' }}
+                >
+                  Chiropractor in Minot, ND
+                </h1>
+                <p
+                  className="text-[24px] lg:text-[32px] text-white mb-8 leading-[1.4] drop-shadow-md"
+                  style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 200 }}
+                >
+                  Achieve optimal health with premium chiropractic care.
+                </p>
+                <a
+                  href="https://portal.sked.life/new-patient/?key=b6e1a8127fac8d99ea72eacef6dbe9f8e19b626781b488998d36f67c6dcdd68c"
+                  className="btn-gold"
+                >
+                  NEW PATIENT SPECIAL
+                </a>
+              </div>
+              <div className="relative">
+                <div className="aspect-video rounded-lg overflow-hidden shadow-xl">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/npblGaOUP9s"
+                    title="CornerStone Chiropractic"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* Swooping curve at bottom */}
-        <div className="absolute bottom-0 left-0 right-0">
+        {/* Swooping curve that extends through the cards */}
+        <div className="absolute bottom-0 left-0 right-0 h-[400px] pointer-events-none" style={{ bottom: '-200px' }}>
           <svg
-            viewBox="0 0 1440 120"
+            viewBox="0 0 1440 400"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="w-full h-auto"
+            className="w-full h-full"
             preserveAspectRatio="none"
           >
             <path
-              d="M0,80 C360,120 720,0 1440,80 L1440,120 L0,120 Z"
+              d="M0,100 C400,200 800,0 1440,100 L1440,400 L0,400 Z"
               fill="white"
             />
           </svg>
         </div>
-      </section>
+      </div>
 
-      {/* Quick Action Cards - matching original site exactly */}
-      <section className="py-12 -mt-8 relative z-10">
+      {/* Quick Action Cards - positioned on top of the swoop */}
+      <section className="py-12 -mt-24 relative z-10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Meet The Team Card */}
