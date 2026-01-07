@@ -46,20 +46,20 @@ export default function Header() {
             />
           </Link>
 
-          <div className="hidden lg:flex items-center space-x-2">
-            <Link href="/about" className="nav-link px-4 py-2 text-[17px] font-medium">About</Link>
+          <div className="hidden lg:flex items-center space-x-1 flex-nowrap">
+            <Link href="/about" className="nav-link px-3 py-2 text-[15px] font-medium whitespace-nowrap">About</Link>
 
             <div className="relative" onMouseEnter={() => setActiveDropdown('services')} onMouseLeave={() => setActiveDropdown(null)}>
-              <button className="nav-link px-4 py-2 text-[17px] font-medium flex items-center">
+              <button className="nav-link px-3 py-2 text-[15px] font-medium flex items-center whitespace-nowrap">
                 Services
-                <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="ml-1 h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               {activeDropdown === 'services' && (
                 <div className="absolute left-0 mt-0 w-64 bg-white shadow-lg rounded-md py-2 z-50">
                   {servicesMenu.map((item) => (
-                    <Link key={item.href} href={item.href} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#C4A069]">
+                    <Link key={item.href} href={item.href} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#C4A069] whitespace-nowrap">
                       {item.name}
                     </Link>
                   ))}
@@ -68,16 +68,16 @@ export default function Header() {
             </div>
 
             <div className="relative" onMouseEnter={() => setActiveDropdown('symptoms')} onMouseLeave={() => setActiveDropdown(null)}>
-              <button className="nav-link px-4 py-2 text-[17px] font-medium flex items-center">
+              <button className="nav-link px-3 py-2 text-[15px] font-medium flex items-center whitespace-nowrap">
                 Symptoms
-                <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="ml-1 h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               {activeDropdown === 'symptoms' && (
                 <div className="absolute left-0 mt-0 w-56 bg-white shadow-lg rounded-md py-2 z-50">
                   {symptomsMenu.map((item) => (
-                    <Link key={item.href} href={item.href} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#C4A069]">
+                    <Link key={item.href} href={item.href} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#C4A069] whitespace-nowrap">
                       {item.name}
                     </Link>
                   ))}
@@ -85,15 +85,15 @@ export default function Header() {
               )}
             </div>
 
-            <Link href="/videos" className="nav-link px-4 py-2 text-[17px] font-medium">Videos</Link>
-            <Link href="/new-patients" className="nav-link px-4 py-2 text-[17px] font-medium">New Patients</Link>
-            <Link href="/faq" className="nav-link px-4 py-2 text-[17px] font-medium">Resources</Link>
+            <Link href="/videos" className="nav-link px-3 py-2 text-[15px] font-medium whitespace-nowrap">Videos</Link>
+            <Link href="/new-patients" className="nav-link px-3 py-2 text-[15px] font-medium whitespace-nowrap">New Patients</Link>
+            <Link href="/faq" className="nav-link px-3 py-2 text-[15px] font-medium whitespace-nowrap">Resources</Link>
           </div>
 
-          <div className="hidden lg:flex items-center space-x-4">
-            <a href="tel:+17018522800" className="text-[#58585A] font-medium text-sm">(701) 852-2800</a>
-            <a href="https://portal.sked.life/new-patient/?key=b6e1a8127fac8d99ea72eacef6dbe9f8e19b626781b488998d36f67c6dcdd68c" target="_blank" rel="noopener noreferrer" className="btn-gold flex items-center gap-2 text-sm">
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="hidden lg:flex items-center space-x-3 flex-shrink-0">
+            <a href="tel:+17018522800" className="text-[#58585A] font-medium text-sm whitespace-nowrap">(701) 852-2800</a>
+            <a href="https://portal.sked.life/new-patient/?key=b6e1a8127fac8d99ea72eacef6dbe9f8e19b626781b488998d36f67c6dcdd68c" target="_blank" rel="noopener noreferrer" className="btn-gold flex items-center gap-2 text-sm whitespace-nowrap flex-shrink-0">
+              <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
               BOOK APPOINTMENT
