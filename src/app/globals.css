@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  /* Primary Colors */
+  --gold-primary: #C4A069;
+  --gold-secondary: #DBC195;
+  --teal-accent: #3D8AA1;
+
+  /* Text Colors */
+  --text-dark: #131313;
+  --text-gray: #58585A;
+  --text-light-gray: #33373D;
+
+  /* Background Colors */
+  --bg-white: #FFFFFF;
+  --bg-light: #F5F5F5;
+  --bg-cream: #F0F5FA;
+
+  /* Border Colors */
+  --border-light: #D1D5DB;
+  --border-gray: #DDDDDD;
+
+  --background: #ffffff;
+  --foreground: #58585A;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-gold: var(--gold-primary);
+  --color-gold-light: var(--gold-secondary);
+  --color-teal: var(--teal-accent);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif;
+  color: var(--text-dark);
+}
+
+.btn-gold {
+  background-color: var(--gold-primary);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-color: #B08F5B;
+}
+
+.bg-teal {
+  background-color: var(--teal-accent);
+}
+
+.bg-gold {
+  background-color: var(--gold-secondary);
+}
+
+.nav-link {
+  color: var(--text-gray);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--gold-primary);
+}
+
+.section-padding {
+  padding: 60px 20px;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 80px 40px;
+  }
+}
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  background-color: var(--gold-secondary);
+  color: white;
+}
