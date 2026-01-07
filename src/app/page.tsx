@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section - matching original site exactly */}
-      <section className="relative py-16 lg:py-24 overflow-hidden">
+      <section className="relative py-16 lg:py-24 overflow-hidden pb-32">
         {/* Background Image with Overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -52,6 +52,22 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Swooping curve at bottom */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg
+            viewBox="0 0 1440 120"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-auto"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,80 C360,120 720,0 1440,80 L1440,120 L0,120 Z"
+              fill="white"
+            />
+          </svg>
         </div>
       </section>
 

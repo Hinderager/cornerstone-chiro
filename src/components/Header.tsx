@@ -33,24 +33,55 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
+      {/* Top Bar with Phone and Book Button */}
+      <div className="hidden lg:block bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-end items-center h-12 gap-4">
+            <a
+              href="tel:+17018522800"
+              className="inline-flex items-center gap-2 text-[#58585A] hover:text-[#C4A069] font-medium transition-colors"
+              style={{ fontFamily: 'Montserrat, sans-serif' }}
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              (701) 852-2800
+            </a>
+            <a
+              href="https://portal.sked.life/new-patient/?key=b6e1a8127fac8d99ea72eacef6dbe9f8e19b626781b488998d36f67c6dcdd68c"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-[#C4A069] text-white px-5 py-2 rounded-full font-bold text-[13px] uppercase whitespace-nowrap hover:bg-[#B08F5B] transition-colors"
+              style={{ fontFamily: 'Montserrat, sans-serif' }}
+            >
+              <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              BOOK APPOINTMENT
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navigation */}
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24">
+        <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex-shrink-0">
             <Image
               src="/images/logo-gold-3CMYK.png"
               alt="CornerStone Chiropractic"
-              width={250}
-              height={124}
-              className="h-[80px] w-auto"
+              width={280}
+              height={139}
+              className="h-[70px] w-auto"
               priority
             />
           </Link>
 
           <div className="hidden lg:flex items-center space-x-1 flex-nowrap">
-            <Link href="/about" className="nav-link px-3 py-2 text-[15px] font-medium whitespace-nowrap">About</Link>
+            <Link href="/about" className="nav-link px-4 py-2 text-[16px] font-medium whitespace-nowrap">About</Link>
 
             <div className="relative" onMouseEnter={() => setActiveDropdown('services')} onMouseLeave={() => setActiveDropdown(null)}>
-              <button className="nav-link px-3 py-2 text-[15px] font-medium flex items-center whitespace-nowrap">
+              <button className="nav-link px-4 py-2 text-[16px] font-medium flex items-center whitespace-nowrap">
                 Services
                 <svg className="ml-1 h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -68,7 +99,7 @@ export default function Header() {
             </div>
 
             <div className="relative" onMouseEnter={() => setActiveDropdown('symptoms')} onMouseLeave={() => setActiveDropdown(null)}>
-              <button className="nav-link px-3 py-2 text-[15px] font-medium flex items-center whitespace-nowrap">
+              <button className="nav-link px-4 py-2 text-[16px] font-medium flex items-center whitespace-nowrap">
                 Symptoms
                 <svg className="ml-1 h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -85,19 +116,21 @@ export default function Header() {
               )}
             </div>
 
-            <Link href="/videos" className="nav-link px-3 py-2 text-[15px] font-medium whitespace-nowrap">Videos</Link>
-            <Link href="/new-patients" className="nav-link px-3 py-2 text-[15px] font-medium whitespace-nowrap">New Patients</Link>
-            <Link href="/faq" className="nav-link px-3 py-2 text-[15px] font-medium whitespace-nowrap">Resources</Link>
-          </div>
-
-          <div className="hidden lg:flex items-center space-x-3 flex-shrink-0">
-            <a href="tel:+17018522800" className="text-[#58585A] font-medium text-sm whitespace-nowrap">(701) 852-2800</a>
-            <a href="https://portal.sked.life/new-patient/?key=b6e1a8127fac8d99ea72eacef6dbe9f8e19b626781b488998d36f67c6dcdd68c" target="_blank" rel="noopener noreferrer" className="btn-gold flex items-center gap-2 text-sm whitespace-nowrap flex-shrink-0">
-              <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              BOOK APPOINTMENT
-            </a>
+            <div className="relative" onMouseEnter={() => setActiveDropdown('videos')} onMouseLeave={() => setActiveDropdown(null)}>
+              <button className="nav-link px-4 py-2 text-[16px] font-medium flex items-center whitespace-nowrap">
+                Videos
+                <svg className="ml-1 h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {activeDropdown === 'videos' && (
+                <div className="absolute left-0 mt-0 w-56 bg-white shadow-lg rounded-md py-2 z-50">
+                  <Link href="/videos" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#C4A069] whitespace-nowrap">All Videos</Link>
+                  <Link href="/new-patients" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#C4A069] whitespace-nowrap">New Patients</Link>
+                  <Link href="/faq" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#C4A069] whitespace-nowrap">Resources</Link>
+                </div>
+              )}
+            </div>
           </div>
 
           <button className="lg:hidden p-2" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
