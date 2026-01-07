@@ -4,10 +4,10 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <>
-      {/* Hero Section with Swooping curve through cards */}
+      {/* Hero Section with Swooping curve through hero image */}
       <div className="relative">
         {/* Hero Content Area */}
-        <section className="relative py-16 lg:py-24 overflow-hidden">
+        <section className="relative py-16 lg:py-24 pb-48 overflow-visible">
           {/* Background Image with Overlay */}
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -18,7 +18,24 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#b8d4df]/90 via-[#c5dce5]/80 to-transparent" />
 
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Swooping curve that cuts through the hero image */}
+          <div className="absolute bottom-0 left-0 right-0 z-10">
+            <svg
+              viewBox="0 0 1440 200"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-full h-auto"
+              preserveAspectRatio="none"
+              style={{ marginBottom: '-1px' }}
+            >
+              <path
+                d="M0,120 C300,200 600,40 900,100 C1200,160 1350,60 1440,80 L1440,200 L0,200 Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h1
@@ -56,26 +73,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* Swooping curve that extends through the cards */}
-        <div className="absolute bottom-0 left-0 right-0 h-[400px] pointer-events-none" style={{ bottom: '-200px' }}>
-          <svg
-            viewBox="0 0 1440 400"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-full h-full"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M0,100 C400,200 800,0 1440,100 L1440,400 L0,400 Z"
-              fill="white"
-            />
-          </svg>
-        </div>
       </div>
 
-      {/* Quick Action Cards - positioned on top of the swoop */}
-      <section className="py-12 -mt-24 relative z-10">
+      {/* Quick Action Cards - positioned below the swoop on white background */}
+      <section className="py-12 bg-white relative z-10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Meet The Team Card */}
