@@ -34,23 +34,23 @@ export default function Header() {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-24">
           <Link href="/" className="flex-shrink-0">
             <Image
               src="/images/logo-gold-3CMYK.png"
               alt="CornerStone Chiropractic"
-              width={180}
-              height={90}
-              className="h-16 w-auto"
+              width={250}
+              height={124}
+              className="h-[80px] w-auto"
               priority
             />
           </Link>
 
-          <div className="hidden lg:flex items-center space-x-1">
-            <Link href="/about" className="nav-link px-3 py-2 text-sm font-medium">About</Link>
-            
+          <div className="hidden lg:flex items-center space-x-2">
+            <Link href="/about" className="nav-link px-4 py-2 text-[17px] font-medium">About</Link>
+
             <div className="relative" onMouseEnter={() => setActiveDropdown('services')} onMouseLeave={() => setActiveDropdown(null)}>
-              <button className="nav-link px-3 py-2 text-sm font-medium flex items-center">
+              <button className="nav-link px-4 py-2 text-[17px] font-medium flex items-center">
                 Services
                 <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -68,7 +68,7 @@ export default function Header() {
             </div>
 
             <div className="relative" onMouseEnter={() => setActiveDropdown('symptoms')} onMouseLeave={() => setActiveDropdown(null)}>
-              <button className="nav-link px-3 py-2 text-sm font-medium flex items-center">
+              <button className="nav-link px-4 py-2 text-[17px] font-medium flex items-center">
                 Symptoms
                 <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -85,9 +85,9 @@ export default function Header() {
               )}
             </div>
 
-            <Link href="/education-videos" className="nav-link px-3 py-2 text-sm font-medium">Videos</Link>
-            <Link href="/new-patients" className="nav-link px-3 py-2 text-sm font-medium">New Patients</Link>
-            <Link href="/contact" className="nav-link px-3 py-2 text-sm font-medium">Resources</Link>
+            <Link href="/videos" className="nav-link px-4 py-2 text-[17px] font-medium">Videos</Link>
+            <Link href="/new-patients" className="nav-link px-4 py-2 text-[17px] font-medium">New Patients</Link>
+            <Link href="/faq" className="nav-link px-4 py-2 text-[17px] font-medium">Resources</Link>
           </div>
 
           <div className="hidden lg:flex items-center space-x-4">

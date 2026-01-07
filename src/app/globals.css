@@ -46,16 +46,33 @@ h1, h2, h3, h4, h5, h6 {
 .btn-gold {
   background-color: var(--gold-primary);
   color: white;
-  padding: 12px 24px;
-  border-radius: 4px;
-  font-weight: 500;
+  padding: 15px 30px;
+  border-radius: 150px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: normal;
   transition: background-color 0.3s ease;
+  display: inline-block;
 }
 
 .btn-gold:hover {
   background-color: #B08F5B;
+}
+
+/* Learn more link style */
+.learn-more-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: var(--text-gray);
+  text-transform: lowercase;
+  letter-spacing: 3px;
+  transition: color 0.3s ease;
+}
+
+.learn-more-link:hover {
+  color: var(--gold-primary);
 }
 
 .bg-teal {
