@@ -126,8 +126,39 @@ export default function Header() {
               {activeDropdown === 'videos' && (
                 <div className="absolute left-0 mt-0 w-56 bg-white shadow-lg rounded-md py-2 z-50">
                   <Link href="/videos" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#C4A069] whitespace-nowrap">All Videos</Link>
-                  <Link href="/new-patients" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#C4A069] whitespace-nowrap">New Patients</Link>
-                  <Link href="/faq" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#C4A069] whitespace-nowrap">Resources</Link>
+                  <Link href="/videos/education" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#C4A069] whitespace-nowrap">Education Videos</Link>
+                </div>
+              )}
+            </div>
+
+            <div className="relative" onMouseEnter={() => setActiveDropdown('new-patients')} onMouseLeave={() => setActiveDropdown(null)}>
+              <button className="nav-link px-4 py-2 text-[16px] font-medium flex items-center whitespace-nowrap">
+                New Patients
+                <svg className="ml-1 h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {activeDropdown === 'new-patients' && (
+                <div className="absolute left-0 mt-0 w-56 bg-white shadow-lg rounded-md py-2 z-50">
+                  <Link href="/new-patients" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#C4A069] whitespace-nowrap">New Patient Info</Link>
+                  <Link href="/new-patients/forms" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#C4A069] whitespace-nowrap">Patient Forms</Link>
+                  <Link href="/new-patients/what-to-expect" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#C4A069] whitespace-nowrap">What to Expect</Link>
+                </div>
+              )}
+            </div>
+
+            <div className="relative" onMouseEnter={() => setActiveDropdown('resources')} onMouseLeave={() => setActiveDropdown(null)}>
+              <button className="nav-link px-4 py-2 text-[16px] font-medium flex items-center whitespace-nowrap">
+                Resources
+                <svg className="ml-1 h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {activeDropdown === 'resources' && (
+                <div className="absolute left-0 mt-0 w-56 bg-white shadow-lg rounded-md py-2 z-50">
+                  <Link href="/faq" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#C4A069] whitespace-nowrap">FAQ</Link>
+                  <Link href="/blog" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#C4A069] whitespace-nowrap">Blog</Link>
+                  <Link href="/contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#C4A069] whitespace-nowrap">Contact Us</Link>
                 </div>
               )}
             </div>
