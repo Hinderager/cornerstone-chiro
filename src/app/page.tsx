@@ -10,12 +10,14 @@ export default function Home() {
         {/* Hero Content Area - matches original: 739px height, 250px bottom padding */}
         <section className="relative overflow-visible" style={{ minHeight: '739px', paddingTop: '100px', paddingBottom: '250px' }}>
           {/* Background Image with Overlay */}
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: 'url(/images/chiropractor-in-minot.webp)',
-              filter: 'brightness(0.85)'
-            }}
+          <Image
+            src="/images/chiropractor-in-minot.webp"
+            alt="Chiropractic care background"
+            fill
+            priority
+            className="object-cover"
+            style={{ filter: 'brightness(0.85)' }}
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#b8d4df]/90 via-[#c5dce5]/80 to-transparent" />
 
@@ -414,11 +416,13 @@ export default function Home() {
       {/* Chiropractic Care in Minot - Full Width */}
       <section className="relative py-16 overflow-hidden">
         {/* Background Image with Overlay */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(/images/chiropractor-in-minot.webp)',
-          }}
+        <Image
+          src="/images/chiropractor-in-minot.webp"
+          alt="Chiropractic care in Minot"
+          fill
+          className="object-cover"
+          sizes="100vw"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-[#606060]/70" />
 
