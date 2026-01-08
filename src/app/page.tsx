@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import LazyYouTube from '@/components/LazyYouTube';
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: 'url(/images/chiropractor-in-minot.jpg)',
+              backgroundImage: 'url(/images/chiropractor-in-minot.webp)',
               filter: 'brightness(0.85)'
             }}
           />
@@ -36,15 +37,7 @@ export default function Home() {
               </div>
               <div className="relative">
                 <div className="aspect-video rounded-lg overflow-hidden shadow-xl">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/npblGaOUP9s"
-                    title="CornerStone Chiropractic"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
+                  <LazyYouTube videoId="npblGaOUP9s" title="CornerStone Chiropractic" />
                 </div>
               </div>
             </div>
@@ -157,10 +150,10 @@ export default function Home() {
             Who&apos;s getting adjusted at CornerStone?
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Image src="/images/patient-1.webp" alt="Patient at CornerStone" width={300} height={533} className="rounded-lg object-cover w-full" style={{ aspectRatio: '9/16' }} />
-            <Image src="/images/patient-2.webp" alt="Patient at CornerStone" width={300} height={533} className="rounded-lg object-cover w-full" style={{ aspectRatio: '9/16' }} />
-            <Image src="/images/patient-3.webp" alt="Patient at CornerStone" width={300} height={533} className="rounded-lg object-cover w-full" style={{ aspectRatio: '9/16' }} />
-            <Image src="/images/patient-4.webp" alt="Patient at CornerStone" width={300} height={533} className="rounded-lg object-cover w-full" style={{ aspectRatio: '9/16' }} />
+            <Image src="/images/patient-1.webp" alt="Patient at CornerStone" width={300} height={533} className="rounded-lg object-cover w-full" style={{ aspectRatio: '9/16' }} loading="lazy" />
+            <Image src="/images/patient-2.webp" alt="Patient at CornerStone" width={300} height={533} className="rounded-lg object-cover w-full" style={{ aspectRatio: '9/16' }} loading="lazy" />
+            <Image src="/images/patient-3.webp" alt="Patient at CornerStone" width={300} height={533} className="rounded-lg object-cover w-full" style={{ aspectRatio: '9/16' }} loading="lazy" />
+            <Image src="/images/patient-4.webp" alt="Patient at CornerStone" width={300} height={533} className="rounded-lg object-cover w-full" style={{ aspectRatio: '9/16' }} loading="lazy" />
           </div>
         </div>
       </section>
@@ -196,11 +189,12 @@ export default function Home() {
               <div className="relative">
                 <div className="absolute -top-4 left-0 w-20 h-20 bg-[#DBC195] rounded-full opacity-70 z-20"></div>
                 <Image
-                  src="/images/about.jpg"
+                  src="/images/about.webp"
                   alt="Dr. William Fielhaber and Dr. Matt Hanson"
                   width={800}
                   height={752}
                   className="relative z-10"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -257,11 +251,12 @@ export default function Home() {
           </p>
           <div className="flex justify-center">
             <Image
-              src="/images/neck-and-back-pain-treatment-near-me-1-1.png"
+              src="/images/neck-back-pain-treatment.webp"
               alt="Spine health education"
               width={800}
               height={400}
               className="rounded-lg"
+              loading="lazy"
             />
           </div>
         </div>
@@ -337,6 +332,7 @@ export default function Home() {
                 width={150}
                 height={100}
                 className="object-contain"
+                loading="lazy"
               />
               <Image
                 src="/images/community-1.webp"
@@ -344,6 +340,7 @@ export default function Home() {
                 width={150}
                 height={150}
                 className="object-contain"
+                loading="lazy"
               />
             </div>
           </div>
@@ -414,6 +411,51 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Chiropractic Care in Minot - Full Width */}
+      <section className="relative py-16 overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(/images/chiropractor-in-minot.webp)',
+          }}
+        />
+        <div className="absolute inset-0 bg-[#606060]/70" />
+
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-20">
+          <h2
+            className="text-[32px] lg:text-[42px] text-white mb-6"
+            style={{ fontFamily: 'Merriweather, serif', fontWeight: 700 }}
+          >
+            Chiropractic Care in Minot
+          </h2>
+          <p
+            className="text-white mb-6 text-[16px] lg:text-[18px] leading-[1.9]"
+            style={{ fontFamily: 'Montserrat, sans-serif' }}
+          >
+            Chiropractic care is a holistic way to deal with all sorts of health-related problems. Your spine is the highway for signals throughout the body and keeping it healthy and aligned helps your body achieve optimal health. Our Chiropractic clinic in Minot is dedicated to helping you avoid medications and surgeries by using proven holistic methods with Chiropractic care.
+          </p>
+          <p
+            className="text-white text-[16px] lg:text-[18px]"
+            style={{ fontFamily: 'Montserrat, sans-serif' }}
+          >
+            Book your appointment to get started today.
+          </p>
+        </div>
+      </section>
+
+      {/* What Patients Are Saying */}
+      <section className="pt-8 pb-6 bg-[#D8D8D8]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2
+            className="text-[28px] lg:text-[36px] text-[#4A4A4A]"
+            style={{ fontFamily: 'Merriweather, serif', fontWeight: 600, fontStyle: 'italic' }}
+          >
+            What Patients Are Saying
+          </h2>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="bg-[#DBC195] py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -477,11 +519,12 @@ export default function Home() {
                 {/* Gold ring around image */}
                 <div className="w-[350px] h-[350px] lg:w-[450px] lg:h-[450px] rounded-full border-4 border-[#DBC195] p-2">
                   <Image
-                    src="/images/back-pain-treatment-near-me-1-1024x1024.png"
+                    src="/images/back-pain-treatment.webp"
                     alt="Family chiropractic care for back pain"
                     width={450}
                     height={450}
                     className="rounded-full object-cover w-full h-full"
+                    loading="lazy"
                   />
                 </div>
               </div>
