@@ -40,7 +40,21 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Merriweather', serif;
-  color: var(--text-dark);
+}
+
+/* Hero section text - white */
+.hero-title {
+  color: white !important;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  color: white !important;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .btn-gold {

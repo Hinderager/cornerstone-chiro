@@ -164,7 +164,7 @@ export default function ContactPage() {
               {/* Map */}
               <div className="mt-8">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2686.4!2d-101.2962!3d48.2303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52cf25f0c7c5c5c5%3A0x0!2s1515%2024th%20Ave%20SW%2C%20Minot%2C%20ND%2058701!5e0!3m2!1sen!2sus!4v1234567890"
+                  src="https://maps.google.com/maps?q=CornerStone+Chiropractic+1515+24th+Ave+SW+Minot+ND&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="300"
                   style={{ border: 0 }}
